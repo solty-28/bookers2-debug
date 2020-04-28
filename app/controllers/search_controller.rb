@@ -1,7 +1,7 @@
 class SearchController < ApplicationController
 	before_action :authenticate_user!
 
-	def index
+	def search
 		@book = Book.new
 		method = params[:search_method]
 		word = params[:search_word]
