@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   get 'home/about' => 'home#about'
   get 'relationships/followings' => 'relationships#followings'
   get 'relationships/followers' => 'relationships#followers'
+  get 'search' => 'search#index'
 
 end

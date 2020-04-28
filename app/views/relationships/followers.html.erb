@@ -7,6 +7,8 @@
 					<th>image</th>
 					<th>name</th>
 					<th></th>
+					<th></th>
+					<th></th>
 					<th colspan="3"></th>
 				</tr>
 			</thead>
@@ -16,10 +18,12 @@
 				<tr>
 					<td><%= attachment_image_tag(user, :profile_image, :fill, 50, 50, fallback: "no-image-mini.jpg") %></td>
 					<td><%= user.name%></td>
-					<td><%= link_to "Show", user, class: "user_#{user.id}" %></td>
+					<td><p>フォロー数 :<%= user.followings.count %></p></td>
+					<td><p>フォロワー数 :<%= user.followers.count %></p></td>
 					<td>
 					  <%= render 'relationships/follow_button', user: user %>
 					</td>
+					<td><%= link_to "Show", user, class: "user_#{user.id}" %></td>
 				</tr>
 				<% end %>
 			</tbody>
